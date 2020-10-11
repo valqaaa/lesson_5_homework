@@ -18,13 +18,13 @@ class LoginPage(BasePage):
             email = domen + "@" + "mail.ru"
         print(email)
 
-        email_input = self.find_element(By.ID, LoginPage.sign_up_email_input_locator)
+        email_input = self.browser.find_element(By.ID, LoginPage.sign_up_email_input_locator)
         email_input.send_keys(email)
-        password_input = self.find_element(By.ID, LoginPage.sign_up_password_input_locator)
+        password_input = self.browser.find_element(By.ID, LoginPage.sign_up_password_input_locator)
         password_input.send_keys(LoginPage.password_1)
-        confirm_password_input = self.find_element_by(By.ID, LoginPage.confirm_sign_up_password_input_locator)
+        confirm_password_input = self.browser.find_element(By.ID, LoginPage.confirm_sign_up_password_input_locator)
         confirm_password_input.send_keys(LoginPage.password_1)
-        confirm_registration_button = self.find_element(By.NAME, LoginPage.sign_up_submit_locator)
+        confirm_registration_button = self.browser.find_element(By.NAME, LoginPage.sign_up_submit_locator)
         confirm_registration_button.click()
 
     def should_be_registration_form(self):

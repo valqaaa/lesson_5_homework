@@ -1,8 +1,9 @@
-from .main_page import MainPage
-from .login_page import LoginPage
+from .pages.main_page import MainPage
+from .pages.login_page import LoginPage
 
 # 1. Registration
-def test_sign_up(self, browser):
+
+def test_sign_up(browser):
 
     # Data
     success_sigh_up_message = "Спасибо за регистрацию!"
